@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+ <!-- header section starts -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <img  src="https://logolook.net/wp-content/uploads/2023/04/Swiggy-Emblem.png" alt="logo">
+        <div class="address">
+          <div class="line-section">
+          <a href="#">Other</a>
+          <div class="line"></div>
+            </div>
+          <span>MCN Nagar, Thoraipakkam, Tamil Nadu</span>
+         <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="col-2">
+          <ul>
+            <li><a href="#"><i class="bi bi-search"></i>Search</a></li>
+            <li><a href="#"><i class="fa-solid fa-percent"></i>Offers</a></li>
+            <li><a href="#"><i class="fa-solid fa-life-ring"></i>Help</a></li>
+            <li><a href="#"><i class="bi bi-person-fill"></i>Sign In</a></li>
+            <li><a href="#"><i class="bi bi-cart-check"></i>Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header section completed -->
+
+<!-- banner section starts -->
+<section class="banner_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt="">
+      </div>
+      <div class="col-2">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t" alt="">
+      </div>
+      <div class="col-3">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/s5ug2key6e2sptaxku5v" alt="">
+      </div>
+      <div class="col-4">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3" alt="">
+        <div class="arrow">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- banner section completed -->
+
+<!-- dynamic cards using array of obects -->
+<section class="card-section">
+    <div class=" card-container">
+      <div class="heading">
+        <h1><span class="count"></span> restaurants</h1>
+        <ul class="lists">
+          <li>Relevance</li>
+          <li>Delivery Time</li>
+          <li>Rating</li>
+          <li>Cost:Low to High</li>
+          <li>Cost:high to Low</li>
+          <li class="active">Filters</li>
+        </ul>
+      </div>
+      <div class="line"></div>
+    </div>
+</section>
+<!-- cards ends -->
+<script>
+
+let foodlist=[{hotel:"SS.Hydrabad Biriyani",
+              foodname:"Biriyani,North Indian,Chinese",
+              amount:500,
+              rating:4.3,
+              time:30,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rij74ejqq5oawnl391ko"},
+
+              {hotel:"KFC",
+              foodname:"Burgers,Biriyani,American,Snacks,Fast Food",
+              amount:400,
+              rating:3.9,
+              time:28,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/56c9ab92bd79745fd152a30fa2525426"},
+             
+              {hotel:"Hotel Vasantham",
+              foodname:"South Indian,Chinease,Indian",
+              amount:150,
+              rating:4.2,
+              time:27,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pi79pzy2suorndvulzkb"},
+
+              {hotel:"Anjappar",
+              foodname:"Chettinad,South Indian,Biriyani,Chinese",
+              amount:600,
+              rating:2.1,
+              time:15,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/temeeqtibwbnjsk3czo2"},
+
+              {hotel:"Paradise Biriyani",
+              foodname:"Biriyani,Kebabs,North Indian,Hyderabadi",
+              amount:400,
+              rating:1.6,
+              time:10,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eltdlqd06jth1wqxqfzq"},
+
+              {hotel:"Nila Veg Home FoodU",
+              foodname:"South Indian",
+              amount:800,
+              rating:3.3,
+              time:30,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/niqz0ewr1htzbqcadist"},
+
+              {hotel:"Erode Amman Mess",
+              foodname:"South Indian,chinese",
+              amount:500,
+              rating:4.3,
+              time:50,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pgbnhkkdfhjwhgwasejv"},
+              
+              {hotel:"JUICE BOX",
+              foodname:"Beverage,Snaks",
+              amount:650,
+              rating:2.3,
+              time:15,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/655e69f8028940f1f2cc4f0fbc0153b2"},
+
+              {hotel:"Yaa Mohaideen BiriyaniS",
+              foodname:"Biriyani",
+              amount:350,
+              rating:3.7,
+              time:12,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/gertidmhqwy34ilby4u3"},
+
+              {hotel:"Wow Momo",
+              foodname:"Healthy food,Asian,Chinese",
+              amount:250,
+              rating:4.5,
+              time:26,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/90ac3da2963978f866177263fba805a7"},
+
+              {hotel:"The Best",
+              foodname:"Biriyani,North Indian,Chinese",
+              amount:400,
+              rating:1.7,
+              time:15,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/gbvtjqkehscu0u35xldj"},
+
+              {hotel:"The wedding Biriyani",
+              foodname:"Snacks,Biriyani,Fast Food",
+              amount:500,
+              rating:4.7,
+              time:10,
+              img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/e626b4a164568e810a0c7daf22c88ca7"}
+              
+                ]
+
+ //  create and get element   
+ let count=document.querySelector(".count")        
+ let main=document.querySelector(".card-container");
+  let rowcontainer=document.createElement("div");
+    rowcontainer.classList.add("row_container");
+    main.appendChild(rowcontainer);
+    //ends
+  count.innerHTML=foodlist.length.toString()
+
+  foodlist.forEach(function(val){
+
+ //col-div create
+ let col=document.createElement("div")
+ col.classList.add("col-container");
+ rowcontainer.appendChild(col)
+ //card-div create
+ let card=document.createElement("div")
+ card.classList.add("card")
+ col.appendChild(card)
+ //image container
+ let imgcont=document.createElement("div")
+ imgcont.classList.add("image-section")
+ card.appendChild(imgcont)
+ let img=document.createElement("img")
+ img.src=val.img;
+ imgcont.appendChild(img)
+ //content section
+ let content=document.createElement("div")
+ content.classList.add("content-container")
+ card.appendChild(content)
+ //heading
+ let head=document.createElement("h1")
+ content.appendChild(head)  
+ head.innerHTML=val.hotel; 
+ // cuisine
+ let des=document.createElement("span")
+ des.classList.add("des")
+ content.append(des)
+ des.innerHTML=val.foodname;
+
+ let details=document.createElement("div")
+ details.classList.add("details")
+ content.appendChild(details)
+ let rating=document.createElement("p")
+ details.appendChild(rating)
+ rating.innerHTML=`<i class="bi bi-star-fill"></i> ${val.rating}`
+ let dot1=document.createElement("span")
+ dot1.classList.add("dot")
+ details.appendChild(dot1);
+ let time=document.createElement("span")
+ time.classList.add("time")
+ details.appendChild(time);
+ time.innerHTML=`${val.time} MINS`;
+ let dot2=document.createElement("span")
+ dot2.classList.add("dot")
+ details.appendChild(dot2);
+ let price=document.createElement("span")
+ details.appendChild(price);
+ price.innerHTML=`&#8377 ${val.amount} FOR TWO`;
+
+ //condition for backgroundcolor based on the rating
+
+ if(val.rating>=0 && val.rating<=2){
+  rating.style.backgroundColor="red"
+ }else if(val.rating>2 && val.rating<=3){
+  rating.style.backgroundColor="orange"
+ }else{
+  rating.style.backgroundColor="rgb(75,195,123);"
+ }
+
+ // card to food items...
+ card.addEventListener("click",fooditem)
+ function fooditem(){
+  location.href="food.html"
+ }
+})
+
+//sort based on delivery time
+
+let lists=document.querySelector(".lists");
+lists.children[1].addEventListener("click",delivertime);
+
+
+function delivertime(){
+
+ //remove previous row containers
+
+ lists.parentElement.nextElementSibling.nextElementSibling.remove()
+ 
+ let result=foodlist.sort(function(a,b){
+
+ return a.time-b.time;
+  
+
+})
+// add new row containers for sort timing...
+let rowcontainer2=document.createElement("div");
+ rowcontainer2.classList.add("row_container-2");  
+ main.appendChild(rowcontainer2);
+
+ // iterate objects in the array
+result.forEach(function(val){
+
+ //col-div create
+ let col=document.createElement("div")
+ col.classList.add("col-container-2");
+ rowcontainer2.appendChild(col);
+ //card-div create
+ let card=document.createElement("div")
+ card.classList.add("card")
+ col.appendChild(card)
+ //image container
+ let imgcont=document.createElement("div")
+ imgcont.classList.add("image-section")
+ card.appendChild(imgcont)
+ let img=document.createElement("img")
+ img.src=val.img;
+ imgcont.appendChild(img)
+ //content section
+ let content=document.createElement("div")
+ content.classList.add("content-container")
+ card.appendChild(content)
+ //heading
+ let head=document.createElement("h1")
+ content.appendChild(head)  
+ head.innerHTML=val.hotel; 
+ // cuisine
+ let des=document.createElement("span")
+ des.classList.add("des")
+ content.append(des)
+ des.innerHTML=val.foodname;
+
+ let details=document.createElement("div")
+ details.classList.add("details")
+ content.appendChild(details)
+ let rating=document.createElement("p")
+ details.appendChild(rating)
+ rating.innerHTML=`<i class="bi bi-star-fill"></i> ${val.rating}`
+ let dot1=document.createElement("span")
+ dot1.classList.add("dot")
+ details.appendChild(dot1);
+ let time=document.createElement("span")
+ time.classList.add("time")
+ details.appendChild(time);
+ time.innerHTML=`${val.time} MINS`;
+ let dot2=document.createElement("span")
+ dot2.classList.add("dot")
+ details.appendChild(dot2);
+ let price=document.createElement("span")
+ details.appendChild(price);
+ price.innerHTML=`&#8377 ${val.amount} FOR TWO`;
+
+ //condition for rating
+
+ if(val.rating>=0 && val.rating<=2){
+  rating.style.backgroundColor="red"
+ }else if(val.rating>2 && val.rating<=3){
+  rating.style.backgroundColor="orange"
+ }else{
+  rating.style.backgroundColor="rgb(75,195,123);"
+ }
+
+  // card to food items...
+  card.addEventListener("click",fooditem)
+ function fooditem(){
+  location.href="food.html"
+ }
+})
+ 
+
+}
+
+// sort based on rating...
+lists.children[2].addEventListener("click",ratings);
+
+function ratings(){
+ // remove original row container
+ lists.parentElement.nextElementSibling.nextElementSibling.remove()
+
+
+  let rateresult= foodlist.sort(function(a,b){
+
+    return b.rating-a.rating;
+
+  })
+
+ // add new row containers for sort timing...
+ let rowcontainer3=document.createElement("div");
+ rowcontainer3.classList.add("row_container-3");  
+ main.appendChild(rowcontainer3);
+
+  // iterate objects in the array
+ rateresult.forEach(function(val){
+
+ //col-div create
+  let col=document.createElement("div")
+  col.classList.add("col-container-3");
+ rowcontainer3.appendChild(col);
+ //card-div create
+ let card=document.createElement("div")
+ card.classList.add("card")
+ col.appendChild(card)
+ //image container
+ let imgcont=document.createElement("div")
+ imgcont.classList.add("image-section")
+ card.appendChild(imgcont)
+ let img=document.createElement("img")
+ img.src=val.img;
+ imgcont.appendChild(img)
+ //content section
+ let content=document.createElement("div")
+ content.classList.add("content-container")
+ card.appendChild(content)
+ //heading
+ let head=document.createElement("h1")
+ content.appendChild(head)  
+ head.innerHTML=val.hotel; 
+ // cuisine
+ let des=document.createElement("span")
+ des.classList.add("des")
+ content.append(des)
+ des.innerHTML=val.foodname;
+
+ let details=document.createElement("div")
+  details.classList.add("details")
+  content.appendChild(details)
+ let rating=document.createElement("p")
+  details.appendChild(rating)
+  rating.innerHTML=`<i class="bi bi-star-fill"></i> ${val.rating}`
+ let dot1=document.createElement("span")
+ dot1.classList.add("dot")
+ details.appendChild(dot1);
+ let time=document.createElement("span")
+ time.classList.add("time")
+ details.appendChild(time);
+ time.innerHTML=`${val.time} MINS`;
+ let dot2=document.createElement("span")
+ dot2.classList.add("dot")
+ details.appendChild(dot2);
+ let price=document.createElement("span")
+ details.appendChild(price);
+ price.innerHTML=`&#8377 ${val.amount} FOR TWO`;
+
+ //condition for rating
+
+ if(val.rating>=0 && val.rating<=2){
+  rating.style.backgroundColor="red"
+  }else if(val.rating>2 && val.rating<=3){
+  rating.style.backgroundColor="orange"
+  }else{
+  rating.style.backgroundColor="rgb(75,195,123);"
+ }
+
+
+  // card to food items...
+  card.addEventListener("click",fooditem)
+ function fooditem(){
+  location.href="food.html"
+ }
+
+ })
+}
+
+// sort based on Low to high...
+
+lists.children[3].addEventListener("click",lowprice);
+
+function lowprice(){
+// remove original row container
+lists.parentElement.nextElementSibling.nextElementSibling.remove() 
+  
+
+let lowprice=foodlist.sort(function(a,b){
+return a.amount-b.amount;
+ 
+})
+
+let rowcontainer4=document.createElement("div");
+rowcontainer4.classList.add("row_container-4");  
+main.appendChild(rowcontainer4);
+
+// iterate objects in the array
+lowprice.forEach(function(val){
+//col-div create
+let col=document.createElement("div")
+col.classList.add("col-container-4");
+rowcontainer4.appendChild(col);
+//card-div create
+let card=document.createElement("div")
+card.classList.add("card")
+col.appendChild(card)
+//image container
+let imgcont=document.createElement("div")
+imgcont.classList.add("image-section")
+card.appendChild(imgcont)
+let img=document.createElement("img")
+img.src=val.img;
+imgcont.appendChild(img)
+//content section
+let content=document.createElement("div")
+content.classList.add("content-container")
+card.appendChild(content)
+//heading
+let head=document.createElement("h1")
+content.appendChild(head)  
+ head.innerHTML=val.hotel; 
+// cuisine
+let des=document.createElement("span")
+des.classList.add("des")
+content.append(des)
+des.innerHTML=val.foodname;
+
+let details=document.createElement("div")
+details.classList.add("details")
+content.appendChild(details)
+let rating=document.createElement("p")
+details.appendChild(rating)
+rating.innerHTML=`<i class="bi bi-star-fill"></i> ${val.rating}`
+ let dot1=document.createElement("span")
+dot1.classList.add("dot")
+details.appendChild(dot1);
+let time=document.createElement("span")
+time.classList.add("time")
+details.appendChild(time);
+time.innerHTML=`${val.time} MINS`;
+let dot2=document.createElement("span")
+dot2.classList.add("dot")
+details.appendChild(dot2);
+let price=document.createElement("span")
+details.appendChild(price);
+price.innerHTML=`&#8377 ${val.amount} FOR TWO`;
+
+//condition for rating
+
+if(val.rating>=0 && val.rating<=2){
+  rating.style.backgroundColor="red"
+}else if(val.rating>2 && val.rating<=3){
+  rating.style.backgroundColor="orange"
+}else{
+  rating.style.backgroundColor="rgb(75,195,123);"
+}
+
+ // card to food items...
+ card.addEventListener("click",fooditem)
+ function fooditem(){
+  location.href="food.html"
+ }
+})
+
+}
+
+// sort based on high to low...
+
+lists.children[4].addEventListener("click",highprice);
+
+function highprice(){
+
+// remove original row container
+lists.parentElement.nextElementSibling.nextElementSibling.remove() ;
+  
+let highprice=foodlist.sort(function(a,b){
+return b.amount-a.amount;
+
+})
+
+let rowcontainer5=document.createElement("div");
+rowcontainer5.classList.add("row_container-5");  
+main.appendChild(rowcontainer5);
+
+// iterate objects in the array
+highprice.forEach(function(val){
+//col-div create
+let col=document.createElement("div")
+col.classList.add("col-container-5");
+rowcontainer5.appendChild(col);
+//card-div create
+let card=document.createElement("div")
+card.classList.add("card")
+col.appendChild(card)
+//image container
+let imgcont=document.createElement("div")
+imgcont.classList.add("image-section")
+card.appendChild(imgcont)
+let img=document.createElement("img")
+img.src=val.img;
+imgcont.appendChild(img)
+//content section
+let content=document.createElement("div")
+content.classList.add("content-container")
+card.appendChild(content)
+//heading
+let head=document.createElement("h1")
+content.appendChild(head)  
+ head.innerHTML=val.hotel; 
+// cuisine
+let des=document.createElement("span")
+des.classList.add("des")
+content.append(des)
+des.innerHTML=val.foodname;
+
+let details=document.createElement("div")
+details.classList.add("details")
+content.appendChild(details)
+let rating=document.createElement("p")
+details.appendChild(rating)
+rating.innerHTML=`<i class="bi bi-star-fill"></i> ${val.rating}`
+ let dot1=document.createElement("span")
+dot1.classList.add("dot")
+details.appendChild(dot1);
+let time=document.createElement("span")
+time.classList.add("time")
+details.appendChild(time);
+time.innerHTML=`${val.time} MINS`;
+let dot2=document.createElement("span")
+dot2.classList.add("dot")
+details.appendChild(dot2);
+let price=document.createElement("span")
+details.appendChild(price);
+price.innerHTML=`&#8377 ${val.amount} FOR TWO`;
+
+//condition for rating
+
+if(val.rating>=0 && val.rating<=2){
+  rating.style.backgroundColor="red"
+}else if(val.rating>2 && val.rating<=3){
+  rating.style.backgroundColor="orange"
+}else{
+  rating.style.backgroundColor="rgb(75,195,123);"
+}
+
+ // card to food items...
+ card.addEventListener("click",fooditem)
+ function fooditem(){
+  location.href="food.html"
+ }
+})
+
+
+}
+
+</script>      
+</body>
+</html>

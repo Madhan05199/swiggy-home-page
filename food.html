@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style-2.css">
+  </head>
+
+<body>
+ <!-- header section starts -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <img  src="https://logolook.net/wp-content/uploads/2023/04/Swiggy-Emblem.png" alt="logo">
+        <div class="address">
+          <div class="line-section">
+          <a href="#">Other</a>
+          <div class="line"></div>
+            </div>
+          <span>MCN Nagar, Thoraipakkam, Tamil Nadu</span>
+         <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="col-2">
+          <ul>
+            <li><a href="#"><i class="bi bi-search"></i>Search</a></li>
+            <li><a href="#"><i class="fa-solid fa-percent"></i>Offers</a></li>
+            <li><a href="#"><i class="fa-solid fa-life-ring"></i>Help</a></li>
+            <li><a href="#"><i class="bi bi-person-fill"></i>Sign In</a></li>
+            <li><span class="cart"></span><a  href="#"><i class="bi bi-cart-check"></i>Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header section completed -->
+<section class="food-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <span>Home</span>
+        <span>/</span>
+        <span>Chennai</span>
+        <span>/</span>
+        <span style="color:rgba(0,0,0,0.8);">Tasty Kitchen</span>
+      </div>
+      <div class="col-2">
+        <i class="bi bi-search"></i>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="col-1">
+        <h2>Tasty Kitchen</h2>
+        <span>Biriyani,South Indian</span><br>
+        <span>Perambur,7.5 Km</span>
+        <p><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/SurgeAssets/distSurge" alt="">Based on distance, an additional delivery fee will apply</p>
+      </div>
+      <div class="col-2">
+        <div class="rating">
+          <span><i class="bi bi-star-fill"></i>4.2</span>
+          <div class="line"></div>
+          <span>10K+ratings</span>
+        </div>
+      </div>
+    </div>
+    <div class="dashed-line"></div>
+    <div class="amount">
+      <span><i class="bi bi-clock-fill"></i>34 MINS</span>
+      <span><i class="bi bi-currency-rupee"></i>300 for two</span>
+    </div>
+    <div class="row-3">
+      <div class="col-1">
+        <p><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/Store_Assets/Icons/OfferIconCart" alt="">20% OFF UPTO &#8377 125</p>
+        <span>USE KOTAK|ABOVE &#8377 500</span>
+      </div>
+      <div class="col-2">
+        <p><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/Store_Assets/Icons/OfferIconCart" alt="">FLAT &#8377 100 OFF</p>
+        <span>USE KOTAK|ABOVE &#8377 500</span>
+
+      </div>
+      <div class="col-3">
+        <p><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/Store_Assets/Icons/OfferIconCart" alt="">20% OFF UPTO &#8377 200</p>
+        <span>USE KOTAK|ABOVE &#8377 500</span>
+
+      </div>
+      <div class="col-4">
+        <p><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/Store_Assets/Icons/OfferIconCart" alt="">20% OFF UPTO &#8377 180</p>
+        <span>USE KOTAK|ABOVE &#8377 500</span>
+      </div>
+    </div>
+    <span class="type">Veg Only</span>
+    <div class="row-4">
+      
+    </div>
+</section>
+<script>
+// array of objects for food list...
+let fooditems=[{item:"Chicken Lollipop (6 Wings Pcs)",
+                amount:239,
+                img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/scp643m905bzy9jrosat",
+                des:"Tender Chicken marinated lollipop",
+                cart:0,
+               },
+                {item:"Kerala Chicken Fry",
+                amount:296,
+                img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/bmfrchkv80f5krkuslru",
+                des:"Tender Chicken marinated and cooked with kerala spices",
+                cart:0,
+               },
+                {item:"Chicken Fried Rice",
+                amount:249,
+                img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/x9lqe73szu1oaa8rxiac",
+                des:"Medium spiced rice tossed with Chicken, Egg & veggies.",
+                cart:0,
+               },
+                {item:"Dry Fruit Lassi",
+                amount:129,
+                img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/afaalzx4l3lklctjafqd",
+                des:"Save upto 44%.",
+                cart:0,
+               },
+                {item:"Rasberry [100 Gms]",
+                amount:90,
+                img:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/jbpwy6o2gdn5e1woujww",
+                des:"Double up your appetite with delicious Moburg.",
+                cart:0,
+                },
+                ]
+//end
+
+//get parent element
+let main=document.querySelector(".row-4");
+
+console.log(main)
+
+
+//create foodmenu cards via DOM...
+//by iterating each objects in the array using for each method
+fooditems.forEach(function(value){
+
+let line=document.createElement("div")
+line.classList.add("line")
+main.appendChild(line);
+
+let card=document.createElement("div");
+card.classList.add("col")
+main.appendChild(card);
+
+
+let content=document.createElement("div")
+content.classList.add("content-section")
+card.appendChild(content)
+content.innerHTML=`<h1>${value.item}</h1>
+                  <span>&#8377 ${value.amount}</span>
+                  <p>${value.des}</p>`
+
+let imagecont=document.createElement("div");
+imagecont.classList.add("image-container");
+card.appendChild(imagecont); 
+imagecont.innerHTML=`<img src=${value.img} alt="food">`
+
+let countbox=document.createElement("div");
+countbox.classList.add("count-section");
+imagecont.appendChild(countbox);
+
+let btn1=document.createElement("button");
+btn1.classList.add("btn1")
+btn1.setAttribute("type","click");
+btn1.innerHTML="+"
+countbox.appendChild(btn1)
+
+let num=document.createElement("span")
+num.innerHTML="0"
+countbox.appendChild(num)
+
+
+let btn2=document.createElement("button");
+btn2.setAttribute("type","click");
+btn2.innerHTML="-"
+countbox.appendChild(btn2)
+
+
+//add function...
+
+btn1.addEventListener("click",addfunction)
+let count=0;
+function addfunction(){
+count++
+num.innerHTML=count;
+
+num.style.color="green";
+btn1.style.color="green";
+
+//cart function call...
+cart()
+}
+
+//minus function...
+
+btn2.addEventListener("click",minusfunction)
+
+function minusfunction(){
+if(num.innerHTML>0){  
+count--
+num.innerHTML=count
+num.style.color="green";
+btn2.style.color="green";
+
+// cart minus function call...
+cartminus()
+}
+}
+
+
+})
+
+// cart total 
+let carts=0;
+let total=document.querySelector(".cart");
+function cart(){
+carts++
+total.innerHTML=carts;
+
+}
+
+function cartminus(){
+carts--
+total.innerHTML=carts;
+
+}
+
+ 
+</script>      
+</body>
+</html>
